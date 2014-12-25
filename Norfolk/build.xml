@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<project name="NanoISV" default="Misc" basedir=".">  
+
+	<!-- ====== Initialize Properties ====== -->
+	<property file="src/com/Norfolk/config/application.properties"/> 
+	
+	<echo> "${BROWSER}" </echo>
+	
+    <property environment="env"/>
+	<property name="test.src" location="src/com/Norfolk"/>
+	<property name="test.dest"  location="build"/>
+	<property name="test.lib"  location="lib"/>
+	<property name="test.result"  location="Reports"/>
+	<property name="test.property" location="src/com/Norfolk/config"/>
+
+    <!-- ====== Include required jar files and set classpath ====== -->
+    <path id="test.classpath">
+		<pathelement location="${test.dest}" />
+		<fileset dir="${test.lib}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+
+    <!-- ====== Check for ANT setup ====== -->
+    <tstamp>
+        <format property="date" pattern="MMddyyyy" />
+        <format property="time" pattern="hhmmss" />
+    </tstamp>
+
+    <!-- ====== Delete old compiled classes ====== -->
+    <target name="clean">
+    	<delete dir="test-output"/>
+        <delete dir="${test.dest}"/>
+    </target>
+
+    <!-- ====== TestNG task definition ====== -->
+    <taskdef name="testng" classpathref="test.classpath" classname="org.testng.TestNGAntTask" />
+    
+    <!-- ====== Compile all java files ====== -->
+    <target name="compile" depends="clean" > 
+        <echo message="making directory..."/>
+		<mkdir dir="${test.dest}"/>
+        <echo message="classpath: ${test.classpath}"/>
+        <echo message="compiling..."/>
+        <javac debug="true" destdir="${test.dest}" includes="**/*.java" srcdir="${test.src}"> 
+            <classpath refid="test.classpath" />
+        </javac>		 
+    </target>
+	
+	<!-- ====== Reading Properties File ====== -->  
+	
+	<loadproperties>
+		<file file="${test.property}/application.properties"/>
+	</loadproperties>
+	
+	<!-- ====== Run All tests ====== -->   
+	
+	<target name="Hauling" depends="compile">
+	        <testng classpathref="test.classpath" suitename="Hauling" outputdir="${test.result}" useDefaultListeners="false" listeners="org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+	            <xmlfileset dir="config" includes="GroupA.xml"/>    
+	        	<sysproperty key="org.uncommons.reportng.title" value="ProjectName Automation Test Report on ${BROWSER}"/>
+	        </testng>
+	 </target>	
+	 	
+</project>

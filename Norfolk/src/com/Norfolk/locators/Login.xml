@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locators>
+    <Login>     
+      <Email><![CDATA[//input[@name='email_address']]]></Email>  
+      <Password><![CDATA[//input[@name='passwd']]]></Password> 
+      <SignInButton><![CDATA[//button[@class='btn btn-lg btn-primary btn-block']]]></SignInButton>
+   </Login>   
+</Locators>

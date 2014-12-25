@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5"  verbose="1" name="Hauling" annotations="JDK">
+    <test name="Hauling " junit="false" preserve-order="true" >
+	<classes>
+            <class name="com.Norfolk.scripts.Login">
+            	<methods>
+            		<include name="testHauling"/>			
+	         	</methods>
+            </class>
+        </classes>
+    </test>
+</suite> 

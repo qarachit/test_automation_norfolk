@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locators>
+    <myaccount>     
+      <ClearApplication><![CDATA[//div[4]/div[2]/div/table/tbody/tr[2]/td[3]/a]]></ClearApplication>  
+      <BeginApp><![CDATA[//div[4]/div[2]/div/table/tbody/tr[2]/td[2]/a]]></BeginApp> 
+   </myaccount>   
+</Locators>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locators>
+    <ViewCart_Step_1>     
+      <PermitType><![CDATA[//*[@id="permit_type_id"]]]></PermitType>  
+      <HaulingOption><![CDATA[Hauling]]></HaulingOption> 
+      <SelectButton><![CDATA[//div[4]/div[2]/div[2]/div/div/div[4]/button]]></SelectButton>
+   </ViewCart_Step_1>   
+   <ViewCart_Step_4>     
+      <HaulingType><![CDATA[//*[@id="hauling_kinds"]]]></HaulingType>  
+      <Option1><![CDATA[Hauling Oversize ‐ Annual]]></Option1> 
+      <RoutingFrom><![CDATA[//*[@id="origin_address"]]]></RoutingFrom>
+      <PreferredRoute><![CDATA[//*[@id="route_option"]]]></PreferredRoute>
+      <MoveDate><![CDATA[//*[@id="start_date_dp"]]]></MoveDate>
+      <Hauling><![CDATA[//*[@id="load"]]]></Hauling>
+      <LoadLength_ft><![CDATA[//*[@id="load_length_ft"]]]></LoadLength_ft>
+      <LoadLength_inch><![CDATA[//*[@id="load_length_in"]]]></LoadLength_inch>
+      <LoadWidth_ft><![CDATA[//*[@id="load_width_ft"]]]></LoadWidth_ft>
+      <LoadWidth_inch><![CDATA[//*[@id="load_width_in"]]]></LoadWidth_inch>
+      <LoadHeight_ft><![CDATA[//*[@id="load_height_ft"]]]></LoadHeight_ft>
+      <LoadHeight_inch><![CDATA[//*[@id="load_height_in"]]]></LoadHeight_inch>
+      <VehicleWeight><![CDATA[//*[@id="gross_weight"]]]></VehicleWeight>
+      <Axles><![CDATA[//*[@id="axles_cnt"]]]></Axles>
+      <axles_1_ft><![CDATA[//*[@id="axle_spacings_ft"]]]></axles_1_ft>
+      <axles_1_inch><![CDATA[//*[@id="axle_spacings_in"]]]></axles_1_inch>
+      <axles_2_ft><![CDATA[(//input[@id='axle_spacings_ft'])[2]]]></axles_2_ft>
+      <axles_2_inch><![CDATA[(//input[@id='axle_spacings_in'])[2]]]></axles_2_inch>
+      <wheelbaseft><![CDATA[//*[@id="wheelbase_ft"]]]></wheelbaseft>
+      <wheelbaseinch><![CDATA[//*[@id="wheelbase_in"]]]></wheelbaseinch>
+      <Overhang><![CDATA[//div[4]/div[5]/div[2]/table/tbody/tr/td/div/div/div/form/table/tbody/tr[13]/td[2]/label[2]/input]]></Overhang>
+      <LicenseNumber><![CDATA[//*[@id="truck_license_num"]]]></LicenseNumber>
+      <InsuranceAmount><![CDATA[//div[4]/div[5]/div[2]/table/tbody/tr/td/div/div/div/form/table/tbody/tr[22]/td[2]/label/input]]></InsuranceAmount>
+      <Submit><![CDATA[//div[4]/div[5]/div[2]/table/tbody/tr/td/div/div/div/form/table/tbody/tr[23]/td/button]]></Submit>
+   
+   </ViewCart_Step_4>
+</Locators>
